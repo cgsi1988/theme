@@ -1,0 +1,143 @@
+// Javascript for CGSI theme
+/*
+jQuery.noConflict();
+ 
+jQuery( document ).ready(function( $ ) {
+    // You can use the locally-scoped $ in here as an alias to jQuery.
+    $( "div" ).hide();
+});
+
+*/
+
+// The $ variable in the global scope has the prototype.js meaning.
+window.onload = function(){
+    var mainDiv = jQuery( "main" );
+    //mainDiv = $( "main" );
+}
+//removed in Drupal 7: if (Drupal.jsEnabled) {
+  $(document).ready(function(){
+		// Hover emulation for IE 6.
+    if ($.browser.msie && parseInt(jQuery.browser.version) == 6) {
+      $('.menu li').hover(function() {
+        $(this).addClass('iehover');
+      }, function() {
+        $(this).removeClass('iehover');
+      });
+    }
+		
+		// Search field on top of all pages
+    $('#edit-search-theme-form-1').val('Search');
+
+    $('#edit-search-theme-form-1').focus(function(){
+      if ($(this).val() == 'Search') {
+        $(this).val('');
+      }
+    })
+
+    $('#edit-search-theme-form-1').blur(function(){
+      if ($(this).val() == '') {
+        $(this).val('Search');
+      }
+    })
+		
+		// Search field on top of all pages
+    $('#edit-search-block-form--2').val('Search');
+
+    $('#edit-search-block-form--2').focus(function(){
+      if ($(this).val() == 'Search') {
+        $(this).val('');
+      }
+    })
+
+    $('#edit-search-block-form--2').blur(function(){
+      if ($(this).val() == '') {
+        $(this).val('Search');
+      }
+    })
+		
+		// On the Members lending library view we collapse the description
+    // field onload, and let users toggle it open with a click.
+    $('.lending-library-table div.description').hide();
+    $('.toggle a').click(function(){
+      var id = $(this).attr('href');
+      id = id.replace('toggle-', '');
+      $(id).slideToggle('fast');
+      return false;
+    });
+    
+    // Membership application, hide the 2nd household name fields
+    // until someone selects a household/sponsor membership type.
+    if ($('.page-signup').length) {
+      $('.page-signup #edit-profile-first-name-2-wrapper').hide();
+      $('.page-signup #edit-profile-last-name-2-wrapper').hide();
+      $('.page-signup input[name="membership_choices"]').change(function() {
+        var pattern = /^cgsi_signup_cgsi_signup_[a-z]{2,}_[0-9]_([0-9])_nid/i;
+        var val = $(this).val().match(pattern);
+        if (val[1] == '1' || val[1] == '2') {
+          $('#edit-profile-first-name-2-wrapper').show();
+          $('#edit-profile-last-name-2-wrapper').show();
+        }
+        else {
+          $('#edit-profile-first-name-2-wrapper').hide();
+          $('#edit-profile-last-name-2-wrapper').hide();
+        }
+      });
+
+      // Don't hide them if the household/sponsor level is already choosen.
+      if ($('.page-signup input[name="membership_choices"]:checked').length) {
+        var pattern = /^cgsi_signup_cgsi_signup_[a-z]{2,}_[0-9]_([0-9])_nid/i;
+        var val = $('.page-signup input[name="membership_choices"]:checked').val().match(pattern);
+        if (val[1] == '1' || val[1] == '2') {
+          $('#edit-profile-first-name-2-wrapper').show();
+          $('#edit-profile-last-name-2-wrapper').show();
+        }
+      }
+
+      // Don't hide them if they have errors though.
+      $('.page-signup #edit-profile-first-name-2-wrapper:has(.error)').show();
+      $('.page-signup #edit-profile-last-name-2-wrapper:has(.error)').show();
+    }
+
+
+    // Link to toggle all descriptions.
+    $('#expand-all').click(function(){
+      if ($(this).html() == 'Expand all descriptions') {
+        // Expand all
+        $('.lending-library-table .description').show();
+        $(this).html('Collapse all descriptions');
+      }
+      else {
+        // Collapse all
+        $('.lending-library-table .description').hide();
+        $(this).html('Expand all descriptions');
+      }
+      return false;
+    });
+    
+    // Links that should open a new window.
+    $('a.popup').click(function() {
+      window.open($(this).attr('href'), 'cgsi_window');
+      return false;
+    });
+    
+    // Open these ul.menu links in a new window.
+    // Lending Library > Tapes
+    $("a[href$='members/library/tapes/search/popup']").click(function() {
+      window.open($(this).attr('href'), 'cgsi_window');
+      return false;
+    });
+    // Lending Library > Books
+    $("a[href$='members/library/books/search/popup']").click(function() {
+      window.open($(this).attr('href'), 'cgsi_window');
+      return false;
+    });
+    
+    // On popup page, check if it's a window.
+    if (window.name == 'cgsi_window') {
+      $('a.popup-close').click(function(){
+        window.close();
+        return true;
+      }).html('Close this window');
+    }
+  });
+//}

@@ -1,0 +1,69 @@
+/* @override http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/popup.css */
+
+/**
+ * @file popup.css
+ * Styles specific to popup pages.
+ */
+ 
+/* Remove backgrounds */
+#popup-page {
+	background: none;
+	}
+
+#popup-page-main{
+	background: none;
+	font-size:75%;
+	margin-left:30px;
+	margin-right:30px;
+	}
+	
+/* Re-do layout #popup-page-header  */
+header#popup-page-header {
+	margin-left:-30px;
+	margin-right:-30px;
+	padding: .5em 0;
+	height: auto;
+	background: #1c5124;
+	text-align: center;
+	}
+
+#popup-page ,
+body  #popup-page #popup-page-content,
+body  #popup-closure-blocks{
+	width: 100%;
+	background: #fff;
+	}
+	
+body #popup-closure-blocks .block-inner {
+	margin: 0 15px;
+	padding: 2px 15px;
+	background: #333;
+	}
+
+#popup-page-content table.views-table thead th,
+#popup-page-content table.sticky-header thead th {
+	padding: .5em 0;
+	border: 1px solid #ccc;
+	border-bottom: 5px solid #ccc;
+	color: #000;
+	text-align: center;
+	}
+
+#popup-page-content table.views-table {
+  width: 100%;
+  clear:both;
+  }
+
+#popup-page-content table.sticky-header {
+  width: auto !important;
+}
+
+#popup-page-content table.views-table td {
+	border: 1px solid #ccc;
+	}
+	
+#popup-page-header a {
+	color: #fff;
+	}
+	
+#popup-page input.form-text { width: 130px; }

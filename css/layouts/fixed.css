@@ -1,0 +1,302 @@
+/**
+ * @file
+ * Positioning for a fixed-width, desktop-centric layout.
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+/**
+ * Center the page.
+ *
+ * If you want to make the page a fixed width and centered in the viewport,
+ * this is the standards-compliant way to do that.
+ */
+#page,
+.region-bottom {
+  margin-left: auto;
+  margin-right: auto;
+  width: 970px;
+}
+
+/* Apply the shared properties of grid items in a single, efficient ruleset. */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  padding-left: 0px;
+  padding-right: 0px;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  word-wrap: break-word;
+  *behavior: url("/path/to/boxsizing.htc");
+  _display: inline;
+  _overflow: hidden;
+  _overflow-y: visible;
+}
+
+#header
+{
+        height: 162px;
+}
+
+#site-name a
+{
+        display: block;
+        width: 970px;
+        height: 162px;
+}
+
+#content #content-inner
+{
+  margin: 0;
+  padding: 30px;
+}
+
+.no-sidebars #content #content-inner {
+  margin-left: 170px;
+  }
+
+
+/* Containers for grid items and flow items. */
+#header,
+#main,
+#footer {
+  *position: relative;
+  *zoom: 1;
+}
+#header:before,
+#header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
+}
+
+/* Navigation bar */
+#main {
+  /* Move all the children of #main down to make room. */
+  /*padding-top: 3em;*/
+  position: relative;
+}
+#navigation {
+  /* Move the navbar up inside #main's padding. */
+  position: absolute;
+  top: 0;
+  height: 2em;
+  width: 970px;
+}
+
+#navigation .block {
+        margin: 0;
+        }
+
+#navigation ul /* Primary and secondary links */
+{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#navigation li /* A simple method to get navbar links to appear in one line. */
+{
+  float: left;
+  padding: 0 10px 0 0;
+}
+
+.region-sidebar-first {
+  margin-top: 2em;
+  display: inline;
+  padding: 60px 15px 15px;
+}
+
+/**
+ * The layout when there is only one sidebar, the left one.
+ */
+
+/* Span 4 columns, starting in 2nd column from left. */
+.sidebar-first #content {
+  float: left;
+  width: 764px;
+  margin-left: 170px;
+  margin-right: -970px;
+}
+
+/* Span 1 column, starting in 1st column from left. */
+.sidebar-first .region-sidebar-first {
+  float: left;
+  width: 140px;
+  margin-left: 0px;
+  margin-right: -140px;
+ }
+
+/**
+ * The layout when there is only one sidebar, the right one.
+ */
+
+/* Span 4 columns, starting in 1st column from left. */
+.sidebar-second #content {
+  float: left;
+  width: 764px;
+  margin-left: 0px;
+  margin-right: -740px;
+}
+
+/* Span 1 column, starting in 5th column from left. */
+.sidebar-second .region-sidebar-second {
+  float: left;
+  width: 170px;
+  margin-left: 740px;
+  margin-right: -970px;
+}
+
+/**
+ * The layout when there are two sidebars.
+ */
+
+/* Span 1 column, starting in 1st column from left. */
+.two-sidebars .region-sidebar-first {
+  float: left;
+  width: 140px;
+}
+
+
+/* Span 3 columns, starting in 2nd column from left. */
+.two-sidebars #content {
+  float: left;
+  width: 570px;
+  margin-left: 170px;
+  margin-right: -740px;
+}
+
+/* Span 1 column, starting in 5th column from left. */
+.two-sidebars .region-sidebar-second {
+  float: right;
+  width: 200px;
+  margin-right:30px;
+}
+
+/* height of navigation bar */
+.two-sidebars #content ,
+.two-sidebars .region-sidebar-first ,
+.two-sidebars .region-sidebar-second,
+.sidebar-first #content {
+  margin-top: 2em; 
+}
+
+/* Highlight region content */
+.region-highlighted {
+/*
+        float: right;
+        height: 3em;
+        margin-top: 50px;
+        margin-right: -30px;
+*/
+        width: 800px; 
+        margin-left: -30px;
+        }
+
+.region-sidebar-second {
+        padding-top: 5em; /* .region-highlighted + navigation height */
+}
+
+/* .region-highlighted height + #navbar height 
+.two-sidebars #content,
+.with-title-content .with-navbar #content,
+.with-title-content .with-navbar .region-sidebar-second {
+        margin-top: 6.6em; 
+        }
+*/
+.region-highlighted-inner {
+        padding: 12px 30px;
+        }
+/* @end */
+
+/* @group Frontpage */
+.front .region-sidebar-second {
+        margin-top: 320px !important;
+        padding-top: 0;
+        }
+
+.front .region-highlighted,
+.front h1.title {
+/*
+        position: absolute;
+        top: 0;
+        z-index: 444;
+*/
+        }
+
+.front #navbar,
+.front #navbar ul {
+        position: absolute;
+        z-index: 555;
+        overflow: visible;
+        }
+
+.front .tabs {
+        padding-top: 15px;
+        }
+
+/*
+.front h1.title {
+        padding-top: 60px;
+        }
+.front.admin-menu h1.title {
+        padding-top: 60px;
+        }
+*/
+.front #content-bottom {
+        margin-top: 30px;
+        }
+
+/* @end */
+/* @group Search box */
+body #block-search-form .container-inline {
+        /*width: 200px;*/
+        float: right;
+        /*margin-top: -23px;*/
+        }
+
+body #block-search-form .advanced-search {
+        float: right;
+        width: 290px;
+        }
+
+#block-search-form .advanced-search .fields {
+        float: left;
+        width: 190px;
+        }
+
+#block-search-form .advanced-search  .advanced {
+        float: left;
+        width: 100px;
+        }
+
+#block-search-form label {
+        display: none;
+        }
+
+#block-search-form .search-submit {
+        margin-bottom: -4px;
+        }
+
+#block-search-form a {
+        font-size: 10px;
+        margin: 2px 0 0 0;
+        padding: 0;
+        text-decoration: underline;
+        }
+/* @end */

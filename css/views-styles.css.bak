@@ -1,0 +1,49 @@
+/* @override http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/views-styles.css?K */
+
+/**
+ * @file
+ * Views Styling
+ */
+
+
+#content .views-row-even,
+#content .views-row-odd {
+	margin: 1.4em 0;
+	}
+	
+/* message board */
+.view-Message-Board tr {
+	border-top: 1px solid #ccc;
+	}
+	
+.view-Message-Board .reply td {
+	padding-left: 24px;
+	font-size: 1em;
+	}
+	
+.view-Message-Board .reply td.first a{
+	padding-left: 12px;
+	background: url(../images/menu-collapsed.png) no-repeat left center;
+	}
+	
+#content .view-id-User_Management table {
+	width: 100%;
+	clear:both;
+	}
+	
+.view-header, .views-exposed-form  {
+	clear:both;
+}
+
+.view-Surnames {
+	min-height:20em;
+}
+
+.views-exposed-form  {
+	min-height:4em;
+}
+
+.view-Rodina-Article-Index caption {
+	font-size: 1.2em !important;
+	text-align: left;
+	font-weight: bold;}

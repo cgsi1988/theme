@@ -1,0 +1,168 @@
+/* @override http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/pages.css?j */
+
+/**
+ * @file
+ * Page Styling
+ */
+
+h1#site-name, div#site-name /* The name of the website */
+{
+        margin: 0;
+	text-indent: -999em;
+}
+
+h1.block-title, /* The title of the page */
+h2.block-title, /* Block title or the title of a piece of content when it is given in a list of content */
+h3.block-title /* Comment title */
+{
+  margin: 0;
+}
+
+.region-sidebar-first,
+.region-sidebar-first a
+{
+        color: #fff;
+}
+
+.region-sidebar-first h2 {
+        margin: 0 0 .5em 0;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        }
+
+.sidebar-first .region-sidebar-first {
+margin-top: 2em;
+display: inline;
+}
+
+.region-highlighted a.login-button,
+.region-highlighted a.logout-button,
+.region-highlighted a.member-button {
+        display: block;
+        float: left;
+        width: 194px;
+        height: 34px;
+        background: url(../images/login.gif) no-repeat 0 0;
+        text-indent: -999em;
+        }
+
+.region-highlighted a.logout-button {
+        width: 111px;
+        height: 18px;
+        background: url(../images/logout.gif) no-repeat 0 0;
+        }
+
+.region-highlighted a.member-button {
+        width: 96px;
+        height: 18px;
+        margin-left: 8px;
+        background: url(../images/member_home.gif) no-repeat 0 0;
+}
+
+.breadcrumb {
+        /*float: left;*/
+        margin-top: -30px;
+        margin-left: -30px;
+        padding-bottom: 0; /* Undo system.css */
+        }
+
+.breadcrumb,
+.breadcrumb a {
+        color: #666;
+        text-transform: lowercase;
+        }
+
+.breadcrumb a:hover {
+        color: #000;
+        }
+
+.breadcrumb li {
+        display: inline;
+}
+
+.front .tabs {
+        padding-top: 15px;
+        }
+
+ul.primary {
+  padding: 0 1em 0 0;
+}
+ul.primary li a {
+  margin-right: 5px;
+  margin-left: 0.5em;
+}
+ul.secondary li {
+  display: inline;
+  padding: 0 1em;
+  border-right: none;
+  border-left: 1px solid #ccc;
+}
+
+ul.primary li a,
+ul.primary li a .tab,
+ul.secondary li a,
+ul.secondary li a .tab
+{
+  display: inline-block; /* Otherwise the blocks mistakenly get 100% width in IE6 */
+}
+
+/*
+        @group Frontpage
+        @see blocks.css
+        @see layout.css
+        */
+.front .node-93 {
+        height: 190px;
+        width: 800px;
+        margin-left: -30px;
+        margin-bottom: 30px;
+        background: #fcfbf1 url(../images/home_map.gif) no-repeat 450px 0;
+        border-bottom: 2px solid #ccc;
+        margin-top: -55px;
+        padding-top: 55px;
+}
+
+.front .node-93 .node-inner {
+        width: 430px;
+        margin-left: 30px;
+        }
+/*        padding-top: 85px;*/
+
+/* make things look right for the admin */
+.front.admin-menu .node-93 {
+        margin-top: -115px;
+        }
+
+/* @end */
+
+#search .form-text {
+        background: #9cc;
+        }
+
+fieldset.search-advanced select {
+        max-width: 400px;
+        }
+
+/*
+ * Closure
+ */
+.region-footer {
+	padding: 1px 0;
+	font-size: .8em;
+	}
+
+.region-footer .block {
+	padding: 0 12px;
+	}
+
+.region-footer,
+.region-footer a
+{
+	background: #333;
+	color: #fff;
+	line-height: 1.6em;
+}
+
+.region-footer a:hover {
+	color: #ebd78e;
+	}

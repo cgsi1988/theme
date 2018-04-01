@@ -1,0 +1,122 @@
+/* @override http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/blocks.css?9 */
+
+/* $Id: blocks.css,v 1.1 2009/02/02 03:38:46 johnalbin Exp $ */
+
+/**
+ * @file
+ * Block Styling
+ */
+
+/*
+	@group Frontpage & Member Homepage
+	@see layout.css
+	@see pages.css
+	*/
+
+.front                         #content .block ,
+.page-content-test-member-page #content .block , 
+.page-members                  #content .block {
+	width: 240px;
+	float: left;
+	margin-bottom: 30px;
+	overflow-y: auto;
+	border: 1px solid #ccc;
+        height: 350px;
+        border-top-left-radius:  10px 5px;
+        border-top-right-radius: 10px 5px;
+	margin-right: 12px;
+	}
+
+.front #content .block h2,
+.page-content-test-member-page #content .block h2 ,
+.page-members                  #content .block h2 {
+	display: block;
+	color: #fff;
+	text-align: center;
+        padding: 4px;
+	background: url(../images/green_hood.gif) no-repeat 0 0;
+	}
+	
+/* join cgsi block */
+#block-block-1 {
+        background-color: #e6db91;
+}
+
+.front #content #block-block-1 h2, .front #content #block-views-Documents-block_1 h2 , .front #content #block-block-11  h2{
+	background: url(../images/red_hood.gif) no-repeat 0 0;
+	}
+
+
+.front #content .block p,
+.page-content-test-member-page #content .block p,
+.page-members                  #content .block p{
+        padding: 0 8px;
+}
+
+
+
+#content #block-block-5 {
+        float: right;
+        margin-top: -14px;
+        border: none;
+        border-top-left-radius:  0;
+        border-top-right-radius: 0;
+        height:auto;
+        }
+
+
+.page-content-test-member-page  #content #block-block-12 ,
+.page-members                   #content #block-block-12 {
+	float: left;
+	}
+	
+.page-members                  #content #block-block-13 ,
+.page-content-test-member-page #content #block-views-Documents-block_1,
+.page-content-test-member-page #content #block-block-13 ,
+.page-members                  #content #block-views-Documents-block_1 {
+	float: right;
+	}
+
+.front #content .block .node,
+.front .region-sidebar-second .block .node {
+	border: none;
+	padding: 0;
+	}
+
+.front .region-sidebar-second .block h2 {
+	margin: 0 0 .8em 0;
+	font-size: 1.6em;
+	}
+
+.front .region-sidebar-second .block .node h2 {
+	font-size: 1em;
+	}
+	
+.front #content .block .node h2 {
+	background: #fff;
+	text-align: left;
+	}
+
+.front #content .block .node {
+	margin: 0; padding: 0;
+	}
+	
+/* research help block */
+#block-block-2 img {
+	float: right;
+	margin: 0 2px 6px 6px;
+	}
+	
+/* latest news */
+.front .region-sidebar-second .views-field-title {
+	font-weight: bold;
+	}
+	
+.front .region-sidebar-second p {
+	margin-top: 0;
+	}
+
+.front .region-sidebar-second .view-footer li {
+	margin: .5em 0;
+	}
+/* @end */

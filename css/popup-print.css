@@ -1,0 +1,11 @@
+@media print {
+	#popup-page-header,#admin-menu,.views-exposed-form {
+		display: none;
+	}
+	body,#page,#main,#main-inner,#content,#content-inner,table,#content table.views-table
+		{
+		width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}

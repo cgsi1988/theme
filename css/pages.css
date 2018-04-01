@@ -1,0 +1,290 @@
+/* @override http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/pages.css?j */
+
+/**
+ * @file
+ * Page Styling
+ */
+
+h1#site-name, div#site-name /* The name of the website */
+{
+        margin: 0;
+	text-indent: -999em;
+}
+
+h1.block-title, /* The title of the page */
+h2.block-title, /* Block title or the title of a piece of content when it is given in a list of content */
+h3.block-title /* Comment title */
+{
+  margin: 0;
+}
+
+.region-sidebar-first,
+.region-sidebar-first a
+{
+        color: #fff;
+}
+
+.region-sidebar-first h2 {
+        margin: 0 0 .5em 0;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        }
+
+.sidebar-first .region-sidebar-first {
+margin-top: 2em;
+display: inline;
+}
+
+/* .region-highlighted a.active, */
+/* .region-highlighted a.login-button, */
+/* .region-highlighted a.logout-button, */
+/* .region-highlighted a.member-button { */
+/*         display: block; */
+/*         float: left; */
+/*         width: 194px; */
+/*         height: 34px; */
+/*         background: url(../images/login.gif) no-repeat 0 0; */
+/*         text-indent: -999em; */
+/*         } */
+
+/* .region-highlighted a.logout-button { */
+/*         width: 111px; */
+/*         height: 18px; */
+/*         background: url(../images/logout.gif) no-repeat 0 0; */
+/*         } */
+
+/* .region-highlighted a.member-button { */
+/*         width: 96px; */
+/*         height: 18px; */
+/*         margin-left: 8px; */
+/*         background: url(../images/member_home.gif) no-repeat 0 0; */
+/* } */
+
+.breadcrumb {
+        /*float: left;*/
+        margin-top: -30px;
+        margin-left: -30px;
+        padding-bottom: 0; /* Undo system.css */
+        }
+
+.breadcrumb,
+.breadcrumb a {
+        color: #666;
+        text-transform: lowercase;
+        }
+
+.breadcrumb a:hover {
+        color: #000;
+        }
+
+.breadcrumb li {
+        display: inline;
+}
+
+.front .tabs {
+        padding-top: 15px;
+        }
+
+ul.primary {
+  padding: 0 1em 0 0;
+}
+ul.primary li a {
+  margin-right: 5px;
+  margin-left: 0.5em;
+}
+ul.secondary li {
+  display: inline;
+  padding: 0 1em;
+  border-right: none;
+  border-left: 1px solid #ccc;
+}
+
+ul.primary li a,
+ul.primary li a .tab,
+ul.secondary li a,
+ul.secondary li a .tab
+{
+  display: inline-block; /* Otherwise the blocks mistakenly get 100% width in IE6 */
+}
+/* 
+* Tab Navigation 
+*/
+ul.primary {
+  border-collapse: collapse;
+  padding: 0 0 0 1em; /* LTR */
+  white-space: nowrap;
+  list-style: none;
+  margin: 5px;
+  height: auto;
+  line-height: normal;
+  border-bottom: 1px solid #bbb;
+}
+ul.primary li {
+  display: inline;
+}
+ul.primary li a {
+  background-color: #ddd;
+  border-color: #bbb;
+  border-width: 1px;
+  border-style: solid solid none solid;
+  height: auto;
+  margin-right: 0.5em; /* LTR */
+  padding: 0 1em;
+  text-decoration: none;
+}
+ul.primary li.active a {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-bottom: #fff 1px solid;
+}
+ul.primary li a:hover {
+  background-color: #eee;
+  border-color: #ccc;
+  border-bottom-color: #eee;
+}
+ul.secondary {
+  border-bottom: 1px solid #bbb;
+  padding: 0.5em 1em;
+  margin: 5px;
+}
+ul.secondary li {
+  display: inline;
+  padding: 0 1em;
+  border-right: 1px solid #ccc; /* LTR */
+}
+ul.secondary a {
+  padding: 0;
+  text-decoration: none;
+}
+ul.secondary a.active {
+  border-bottom: 4px solid #999;
+}
+
+
+/*
+        @group Frontpage
+        @see blocks.css
+        @see layout.css
+        */
+.front .node-93 {
+        height: 190px;
+        width: 800px;
+        margin-left: -30px;
+        margin-bottom: 30px;
+        background: #fcfbf1 url(../images/home_map.gif) no-repeat 450px 0;
+        border-bottom: 2px solid #ccc;
+        margin-top: -55px;
+        padding-top: 55px;
+}
+
+.front .node-93 .node-inner {
+        width: 430px;
+        margin-left: 30px;
+        }
+/*        padding-top: 85px;*/
+
+/* make things look right for the admin */
+.front.admin-menu .node-93 {
+        margin-top: -115px;
+        }
+
+/* @end */
+
+#search .form-text {
+        background: #9cc;
+        }
+
+fieldset.search-advanced select {
+        max-width: 400px;
+        }
+
+/*
+ * Closure
+ */
+.region-footer {
+	padding: 1px 0;
+	font-size: .8em;
+	}
+
+.region-footer .block {
+	padding: 0 12px;
+	}
+
+.region-footer,
+.region-footer a
+{
+	background: #333;
+	color: #fff;
+	line-height: 1.6em;
+}
+
+.region-footer a:hover {
+	color: #ebd78e;
+	}
+
+	
+/* @group User profiles */
+.profile table {
+	width: 100%;
+	}
+.profile-left {
+	width: 200px;
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+	}
+
+.profile-right {
+	vertical-align: top;
+	}
+/* @end - User profiles */
+
+/* @group Membership Level & Term Chart */
+.membership-chart-wrapper {
+	width: 300px;
+	float: right;
+	margin: 0 0 0 12px;
+	}
+
+.membership-chart {
+	width: 300px; /* width plus padding-left/right should be 365px */
+	padding: 5px;
+	background: #e6d691;
+	text-align: center;
+	}
+
+.membership-chart h3 {
+	margin: 0;
+	}
+	
+.membership-chart p.table-top {
+	display: block;
+	margin: 0;
+	text-transform: uppercase;
+	}
+	
+.membership-chart table {
+	width: 100%;
+	border-top: 1px solid #ccc;
+	text-align: left;
+	}
+
+.membership-chart table td {
+	padding: 0;
+	}
+	
+a.signup-link {
+	display: block;
+	width: 300px;
+	height: 43px;
+	text-indent: -999em;
+	background: url(../images/sign_up_button.gif) no-repeat 0 0;
+	}
+	
+/* @end */
+
+/** images */
+.field-name-field-page-image {
+	float: right;
+	margin: 0 0 6px 16px;
+	}

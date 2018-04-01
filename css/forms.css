@@ -1,0 +1,237 @@
+/* @override 
+	http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/forms.css?9
+	http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/forms.css?R
+*/
+
+/* $Id: forms.css,v 1.2 2009/02/17 05:43:08 johnalbin Exp $ */
+
+/**
+ * @file
+ * Form Styling
+ */
+
+.form-item, /* Wrapper for a form element (or group of form elements) and its label */
+.form-checkboxes,
+.form-radios
+{
+  margin: 1em 0;
+}
+
+.form-item input.error, /* Highlight the form elements that caused a form submission error */
+.form-item textarea.error,
+.form-item select.error
+{
+  border: 2px solid #c00;
+}
+
+form fieldset {
+	padding: 1em;
+	border: 1px solid #ccc;
+	}
+
+.form-item label /* The label for a form element */
+{
+  display: block;
+  font-weight: bold;
+}
+
+.form-item label.option /* The label for a radio button or checkbox */
+{
+  display: inline;
+  font-weight: normal;
+}
+
+.form-required /* The part of the label that indicates a required field */
+{
+  color: #c00;
+}
+
+.form-item .description /* The descriptive help text (separate from the label) */
+{
+  font-size: 0.85em;
+}
+
+.form-checkboxes .form-item, /* Pack groups of checkboxes and radio buttons closer together */
+.form-radios .form-item
+{
+  margin: 0.4em 0;
+}
+
+.form-submit /* The submit button */
+{
+}
+
+#cgsi-signup-form .form-submit /* The submit button */
+{
+	font-size: 0.95em !important
+}
+
+.container-inline div, .container-inline label /* Inline labels and form divs */
+{
+  display: inline;
+}
+
+.tips /* Tips for Drupal's input formats */
+{
+}
+
+
+/*
+ * Search (search-theme-form.tpl.php)
+ */
+#search-box /* Wrapper for the search form */
+{
+}
+
+#edit-search-theme-form-1-wrapper label /* Label that says "Search this site:" */
+{
+  display: none;
+}
+
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+#search-block-form /* Wrapper for the search form */
+{
+}
+
+#edit-search-block-form-1-wrapper label /* Label that says "Search this site:" */
+{
+  display: none;
+}
+
+
+/*
+ * Drupal's default login form block
+ */
+#user-login-form
+{
+  text-align: left;
+}
+
+
+/* @group Admin Tables
+ *
+ * Drupal admin tables
+ *
+ * We overrode these styles in html-elements.css, but restore them for the admin
+ * section of the site.
+ */
+form tbody {
+	border-top: 1px solid #ccc;
+	}
+
+form th {
+	text-align: left;
+	padding-right: 1em;
+	border-bottom: 3px solid #ccc;
+	}
+
+form tbody th {
+	border-bottom: 1px solid #ccc;
+	}
+
+form thead th {
+	text-align: left;
+	padding-right: 1em;
+	border-bottom: 3px solid #ccc;
+	}
+/* @end */
+
+/* @group Membership Signup/Renewal form */
+#cgsi-signup-renewal-form .pricing-options .form-item {
+	width: 160px;
+	float: left;
+	margin-right: 20px;
+	}
+	
+form .membership-chart-wrapper,
+form .membership-chart {
+	margin: 0;
+	padding: 0;
+	}
+	
+form .membership-chart {
+	width: auto;
+	padding: 12px;
+	}
+
+table#membership-table {
+	width: 100%;
+	}
+
+table#membership-table tr {
+	border: 0;
+	background-color: #e6d691;
+	}
+table#membership-table td { padding-left: 8px; }
+
+table#membership-table tr.heading-row {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+	}
+
+table#membership-table td.heading-region {
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	}
+
+table#membership-table tr.heading {
+	font-weight: bold;
+	}
+/* @end */
+
+/* @group User search form */
+	/* #content .view-User-Management{ */
+	/* 	border-top: 1px solid #999; */
+	/* 	border-bottom: 1px solid #999; */
+	/* 	} */
+
+.view-User-Management p {
+	display:block;
+	clear:both;
+}
+
+.view-User-Management .views-exposed-widget {
+	width: 200px;
+	padding: 10px;
+	margin: .5em 5px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	}
+
+/* .view-User-Management .views-widget input { */
+/* 	width: 190px; */
+/* 	} */
+	
+/* .view-User-Management #edit-country { */
+/* 	width: 200px; */
+/* 	overflow: hidden; */
+/* 	} */
+
+/* .view-User-Management #edit-submit { */
+/* 	display: block; */
+/* 	} */
+
+/* .view-User-Management .date-clear input.form-text { */
+/* 	width: 170px; */
+/* 	padding: 2px 0px 3px 24px; */
+/* 	background: url(images/date.png) no-repeat left center; */
+/* 	} */
+/* @end */
+
+#edit-views-captcha-views,#edit-cgsi-captcha-views {
+	height: 650px;
+}
+
+.uc-cart-checkout-form fieldset {
+	margin: 0 0;
+}
+
+.uc-store-address-field .form-item label {
+  width: 9em;
+}

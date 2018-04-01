@@ -1,0 +1,287 @@
+/* @override http://localhost/cgsi_org/public_html/sites/default/themes/cgsi/navigation.css?E */
+
+/**
+ * @file
+ * Navigation Styling
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first or .region-sidebar-second
+ * (see the layout.css file.)
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active
+{
+  color: #000;
+}
+
+/* @group Navigation bar */
+#navigation {
+	background: #ebd78e;
+	border-bottom: 1px solid #000;
+	}
+	
+#navigation ul,
+#navigation li {
+	list-style: none;
+	list-style-image: none;
+	padding: 0;
+	margin: 0;
+	}
+	
+#navigation a {
+	display: block;
+	padding: 4px 12px;
+	color: #000;
+	font-size: 1.2em;
+	text-decoration: none;
+	}
+
+#navigation a span {
+	font-style: italic;
+	}
+
+#navigation a:hover,
+#navigation a.active,
+#navigation .active-trail a,
+#navigation li:hover,
+#navigation li.iehover {
+	background: #98141f;
+	color: #fff;
+	}
+	
+#navigation li ul {
+	display: none;
+	position: absolute;
+	z-index: 777;
+	padding-bottom: 13px !important;
+	background: url(../images/menu_bottom_red.png) no-repeat bottom right;
+	}
+
+#navigation li:hover ul,
+#navigation li.iehover ul {
+	display: block;
+	}
+	
+#navigation li ul li {
+	float: none !important;
+	padding: 0;
+	background: #98141f;
+	}
+	
+#navigation li ul li a {
+	display: block;
+	width: 200px;
+	padding: 6px 0;
+	margin: 0 15px;
+	color: #fff;
+	font-size: 1em;
+	text-transform: none;
+	border-bottom: 1px solid #fff;
+	}
+
+#navigation li ul li a:hover {
+	text-decoration: underline;
+	}
+
+#navigation li ul li.last a {
+	border: none;
+	}
+	
+#navigation li ul li ul {
+	display: none !important;
+	}
+/* @end */
+
+/* @group Primary and Secondary links */
+#primary {
+}
+
+#secondary{
+}
+/* @end */
+
+/* @group Left sidebar navigation */
+.region-sidebar-first .menu,
+.region-sidebar-first .menu li {
+	list-style: none;
+	list-style-image: none;
+	padding: 0;
+	margin: 0;
+	}
+	
+/* this is so we can have the background color cover the gutter on :hover */
+.region-sidebar-first .menu li {
+	margin: 0 -15px;
+	padding: 0 15px;
+	}
+	
+.region-sidebar-first .menu a {
+	display: block;
+	padding: 6px 0;
+	font-weight: bold;
+	text-decoration: none;
+	/* text-transform: lowercase; */
+	border-bottom: 1px solid #fff;
+	}
+	
+.region-sidebar-first .menu li.last a {
+	border: none;
+	}
+	
+/* pop out menus */
+.region-sidebar-first .menu li ul {
+	display: none;
+	width: 150px;
+	position: absolute;
+	margin-left: 155px;
+	margin-top: -29px;
+	padding: 0 15px 13px 15px;
+	background: url(../images/menu_bottom_green.png) no-repeat right bottom;
+	}
+
+.region-sidebar-first .menu li li {
+	background: #5e875c;
+	}
+
+.region-sidebar-first .menu li:hover,
+.region-sidebar-first .menu li.iehover {
+	background: #177e32;
+	}
+
+.region-sidebar-first .menu li:hover ul,
+.region-sidebar-first .menu li.iehover ul {
+	display: block;
+	}
+
+.region-sidebar-first .menu li li a {
+	font-weight: normal;
+	}
+	
+.region-sidebar-first .menu li li:hover,
+.region-sidebar-first .menu li li.iehover,
+.region-sidebar-first .menu li li a:hover {
+	text-decoration: underline;
+	background: #5e875c;
+	}
+	
+.region-sidebar-first .menu li:hover ul ul,
+.region-sidebar-first .menu li.iehover ul ul {
+	display: none;
+	}
+	
+.region-sidebar-first .menu li:hover ul li:hover ul,
+.region-sidebar-first .menu li.iehover ul li.iehover ul {
+	display: block;
+	}
+/* @end */
+
+/* @group Right sidebar navigation */
+.region-sidebar-second .menu,
+.region-sidebar-second .menu li {
+	list-style: none;
+	list-style-image: none;
+	padding: 0;
+	}
+
+.region-sidebar-second .menu li li {
+	padding-left: 16px;
+	background: url(../images/menu-collapsed.png) no-repeat left center;
+	}	
+
+.region-sidebar-second .menu li a {
+	display: block;
+	padding: 4px 0;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+	}
+	
+.region-sidebar-second .menu li a:hover {
+	color: #1c5124;
+	}
+
+.region-sidebar-second .menu li a.active {
+	color: #646464;
+	}
+/* @end */
+
+/* @group user menu navigation */
+#block-system-user-menu, #block-menu-menu-user-login {
+	float: right !important;
+	height: auto !important;
+	width: auto !important;
+	overflow-y: visible !important;
+	position: relative;
+}
+
+#block-system-user-menu ul,#block-system-user-menu li
+, #block-menu-menu-user-login ul, #block-menu-menu-user-login li {
+	list-style: none;
+	list-style-image: none;
+	padding: 0;
+	display: inline;
+}
+
+#block-system-user-menu a
+, #block-menu-menu-user-login  a {
+	color: white !important;
+	font-weight: bold;
+	font-size:1.5em;
+	text-decoration: none;
+	padding: 0.75em;
+	background-color: RGB(19, 85, 26);
+}
+
+#block-system-user-menu a {
+	font-size:0.75em;
+	padding: 0.5em;
+}
+
+#block-system-user-menu a:hover,
+#block-system-user-menu a.active,
+#block-system-user-menu .active-trail a,
+#block-system-user-menu li:hover,
+#block-system-user-menu li.iehover {
+/* 	background: #98141f; */
+/* 	color: #fff; */
+	}
+
+#block-system-user-menu li ul {
+	display: none;
+	position: absolute;
+	z-index: 777;
+	padding-bottom: 13px;
+	background: url(../images/menu_bottom_red.png) no-repeat bottom right;
+}
+
+#block-system-user-menu li:hover ul,#block-system-user-menu li.iehover ul	{
+	display: block;
+}
+
+#block-system-user-menu li ul li a {
+	display: block;
+	width: 200px;
+	padding: 6px 0;
+	margin: 0 15px;
+	color: #fff;
+	font-size: 1em;
+	text-transform: none;
+	border-bottom: 1px solid #fff;
+}
+
+#block-system-user-menu li ul li a:hover {
+	text-decoration: underline;
+}
+
+#block-system-user-menu li ul li.last a {
+	border: none;
+}
+
+#block-system-user-menu li ul li ul {
+	display: none !important;
+}
+/* @end */
